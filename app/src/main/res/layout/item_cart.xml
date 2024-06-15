@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBookMark"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:elevation="@dimen/_3sdp"
+            android:src="@drawable/ic_bookmark"
+            app:tint="@color/color_2962a5"
+            app:layout_constraintBottom_toTopOf="@+id/cvMain"
+            app:layout_constraintStart_toStartOf="@+id/cvMain"
+            app:layout_constraintTop_toTopOf="@+id/cvMain" />
+
+        <TextView
+            android:id="@+id/tvBookMark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:elevation="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="25%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBookMark"
+            app:layout_constraintEnd_toEndOf="@+id/ivBookMark"
+            app:layout_constraintStart_toStartOf="@+id/ivBookMark"
+            app:layout_constraintTop_toTopOf="@+id/ivBookMark" />
+
+        <ImageView
+            android:id="@+id/ivShopeeMall"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_minus5sdp"
+            android:elevation="@dimen/_2sdp"
+            android:src="@drawable/ic_shopee_mall"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBookMark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvBookMark" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:background="@color/black"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvProduct"
+                    android:layout_width="@dimen/_235sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_medium"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="Loading..."
+                    android:textAlignment="textStart"
+                    android:textColor="#E6000000"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivProduct"
+                    app:layout_constraintTop_toTopOf="@+id/ivProduct" />
+
+                <View
+                    android:id="@+id/divider_2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#DCDCE4"
+                    app:layout_constraintEnd_toEndOf="@+id/tvProduct"
+                    app:layout_constraintStart_toStartOf="@+id/tvProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/tvProduct" />
+
+                <TextView
+                    android:id="@+id/tvCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Loading..."
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/color_2962a5"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+                <TextView
+                    android:id="@+id/tv7day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_rectangle"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="7 ngày trả hàng"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/color_2962a5"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/backgroundBuy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:elevation="@dimen/_2sdp"
+        android:background="#66d0011b"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ProductDetailActivity">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:elevation="@dimen/_2sdp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/background_brand"
+            android:elevation="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="25%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/loBuyNow"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/ivShopeeMall"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_minus5sdp"
+                    android:elevation="@dimen/_2sdp"
+                    android:src="@drawable/ic_shopee_mall"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivProduct"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_350sdp"
+                    android:background="@color/black"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/loCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_2962a5"
+                    android:paddingBottom="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/ivProduct">
+
+                    <ImageView
+                        android:id="@+id/ivFlash"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="#ecba16"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_flash"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/color_2962a5" />
+
+                    <TextView
+                        android:id="@+id/tvFlash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="FLASH"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivFlash"
+                        app:layout_constraintStart_toEndOf="@+id/ivFlash"
+                        app:layout_constraintTop_toTopOf="@+id/ivFlash" />
+
+                    <TextView
+                        android:id="@+id/tvSale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="SALE"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivFlash"
+                        app:layout_constraintStart_toEndOf="@+id/tvFlash"
+                        app:layout_constraintTop_toTopOf="@+id/ivFlash" />
+
+                    <View
+                        android:id="@+id/divider_1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#ecba16"
+                        app:layout_constraintEnd_toEndOf="@+id/tvSale"
+                        app:layout_constraintStart_toStartOf="@+id/ivFlash"
+                        app:layout_constraintTop_toTopOf="@+id/ivFlash" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#ecba16"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivFlash"
+                        app:layout_constraintEnd_toEndOf="@+id/tvSale"
+                        app:layout_constraintStart_toStartOf="@+id/ivFlash" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:background="#ecba16"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvSale"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_1"
+                        app:layout_constraintTop_toTopOf="@+id/tvSale" />
+
+                    <TextView
+                        android:id="@+id/tvCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Empty"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ivFlash" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginBottom="@dimen/_minus5sdp"
+                    android:src="@drawable/image_freeship"
+                    app:layout_constraintBottom_toBottomOf="@+id/loCost"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNameStorage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Storage"
+                    android:textColor="#E6000000"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loCost" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNameStorage" />
+
+                <TextView
+                    android:id="@+id/tvNameMau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Màu sắc"
+                    android:textColor="#E6000000"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewMau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNameMau" />
+
+                <TextView
+                    android:id="@+id/tvNameProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#E6000000"
+                    android:textSize="@dimen/_17ssp"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewMau" />
+
+                <TextView
+                    android:id="@+id/tvDescriptionProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#80000000"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNameProduct" />
+
+                <ImageView
+                    android:id="@+id/ivCarFreeShip"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_car_freeship"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDescriptionProduct"
+                    app:tint="@color/color_2962a5" />
+
+                <TextView
+                    android:id="@+id/tvCarFreeShip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Miễn phí giao hàng"
+                    android:textColor="#E6000000"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCarFreeShip"
+                    app:layout_constraintStart_toEndOf="@+id/ivCarFreeShip"
+                    app:layout_constraintTop_toTopOf="@+id/ivCarFreeShip" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/ivProductQuality"
+                    app:layout_constraintStart_toEndOf="@+id/tvCarFreeShip"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDescriptionProduct">
+
+                    <ImageView
+                        android:id="@+id/ivFlexible"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:src="@drawable/ic_flexible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/color_2962a5" />
+
+                    <TextView
+                        android:id="@+id/tvFlexible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Uy tín, tiện lợi"
+                        android:textColor="#E6000000"
+                        android:textSize="@dimen/_8ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivFlexible"
+                        app:layout_constraintStart_toEndOf="@+id/ivFlexible"
+                        app:layout_constraintTop_toTopOf="@+id/ivFlexible" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/ivProductQuality"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_quality"
+                    app:layout_constraintEnd_toStartOf="@+id/tvProductQuality"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDescriptionProduct"
+                    app:tint="@color/color_2962a5" />
+
+                <TextView
+                    android:id="@+id/tvProductQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Sản phẩm cao cấp"
+                    android:textColor="#E6000000"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivProductQuality"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivProductQuality" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loBuyNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="#32BE4B"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_shopping_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/btnBuy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/color_2962a5"
+                android:fontFamily="@font/roboto_regular"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Mua ngay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivCart"
+                app:layout_constraintTop_toTopOf="@+id/ivCart" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/frLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_99000000"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_gravity="center"
+                android:theme="@style/ProgressBarTheme" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
